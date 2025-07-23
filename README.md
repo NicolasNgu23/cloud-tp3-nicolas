@@ -108,8 +108,13 @@ npm run deploy  # Build + déploiement
 
 Après le déploiement, vous obtiendrez :
 
-- **URL CloudFront** (recommandée) : `https://xxxxx.cloudfront.net`
-- **URL S3 directe** : `http://bucket-name.s3-website-eu-west-3.amazonaws.com`
+- **URL CloudFront** (recommandée) : `https://dvrm5kon4u7fv.cloudfront.net`
+- **URL S3 directe** : `http://my-react-app-bucket-f45gm93f.s3-website.eu-west-3.amazonaws.com`
+
+## 🌐 Site en ligne
+
+Votre site React est actuellement déployé et accessible à l'adresse :
+**https://dvrm5kon4u7fv.cloudfront.net**
 
 ## 🛡️ Sécurité
 
