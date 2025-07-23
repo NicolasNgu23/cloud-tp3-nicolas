@@ -3,8 +3,9 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  margin-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 30%, #434343 70%, #000000 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +23,66 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+}
+
+.App-header h1 {
+  margin: 20px 0;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.App-header > p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 20px 0 40px 0;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.feature h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.build-info {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.8em;
+  opacity: 0.7;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .App-link {
@@ -34,5 +95,21 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .App-header h1 {
+    font-size: 2em;
+  }
+  
+  .build-info {
+    position: static;
+    margin-top: 20px;
   }
 }

@@ -1,7 +1,17 @@
-variable "vpc_cidr" {
-  default = "10.0.0.0/16"
+variable "bucket_name" {
+  description = "Nom de base du bucket S3 (un suffixe aléatoire sera ajouté)"
+  type        = string
+  default     = "my-react-app-bucket"
 }
 
-variable "public_subnet_cidr" {
-  default = ["10.0.1.0/24", "10.0.2.0/24"]
+variable "environment" {
+  description = "Environnement de déploiement"
+  type        = string
+  default     = "dev"
+}
+
+variable "aws_region" {
+  description = "Région AWS"
+  type        = string
+  default     = "eu-west-3"
 }
